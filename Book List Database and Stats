@@ -1,0 +1,8 @@
+--Create a book ranking list/database--
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER );
+
+INSERT INTO books VALUES (1, "Six of Crows", 5);
+INSERT INTO books VALUES (2, "Throne of Glass", 4);
+INSERT INTO books VALUES (3, "ACOTAR", 3.5);
+SELECT * FROM books;
