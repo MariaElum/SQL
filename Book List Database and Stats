@@ -1,8 +1,29 @@
---Create a book ranking list/database--
+--Create a shop list/database--
 
-CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER );
+CREATE TABLE furniture (id INTEGER PRIMARY KEY, name TEXT, colour TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
 
-INSERT INTO books VALUES (1, "Six of Crows", 5);
-INSERT INTO books VALUES (2, "Throne of Glass", 4);
-INSERT INTO books VALUES (3, "ACOTAR", 3.5);
-SELECT * FROM books;
+INSERT INTO furniture VALUES
+(1, "table", "brown", 4, 30, 2),
+(2, "table", "white", 2, 30, 2),
+(3, "chair", "brown", 6, 15, 3),
+(4, "chair", "white", 8, 15, 3),
+(5, "rug", "red", 5, 20, 2),
+(6, "rug", "blue", 3, 20, 2),
+(7, "rug", "green", 1, 20, 2),
+(8, "lamp", "white", 4, 5, 1),
+(9, "lamp", "black", 2, 5, 1),
+(10, "mirror", "gold", 8, 25, 3),
+(11, "mirror", "white", 12, 25, 3),
+(12, "dresser", "green", 4, 38, 1),
+(13, "dresser", "white", 2, 38, 1),
+(14, "bed", "white", 1, 150, 3),
+(15, "bed", "brown", 3, 150, 3)
+;
+
+SELECT * FROM furniture
+ORDER BY price asc
+;
+
+SELECT name, aisle FROM furniture
+GROUP BY price
+ORDER BY aisle asc
